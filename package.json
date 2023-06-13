@@ -4,7 +4,13 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "dev": "concurrently \"npm run client\" \"npm run server\" ",
+    "build": "cd client && npm run build",
+    "start": "npm run build && cd server && node server.js",
+    "server": "cd server && nodemon server.js",
+    "client": "cd client && npm start"
   },
   "repository": {
     "type": "git",
@@ -16,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/DustinSwecker/job-dropper/issues"
   },
-  "homepage": "https://github.com/DustinSwecker/job-dropper#readme"
+  "homepage": "https://github.com/DustinSwecker/job-dropper#readme",
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  }
 }
