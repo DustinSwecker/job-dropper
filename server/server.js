@@ -1,8 +1,11 @@
 const express = require("express");
 const PORT = process.env.PORT || 3001;
-const db = require('./config/connection')
+const db = require('./config/connection');
+const models = require("./models");
+
 
 const app = express();
+
 
 db.once('open', () => {
   console.log('connected to db')
