@@ -1,4 +1,4 @@
 
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://dustinswecker:passwordsaredumb@cluster0.lydzm8d.mongodb.net/jobdropper?retryWrites=true&w=majority' || 'mongodb://localhost/jobdropper');
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/jobdropper');
 module.exports = mongoose.connection;
