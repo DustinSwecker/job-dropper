@@ -35,6 +35,6 @@ const jobsSchema = new Schema({
 
 const Job = model('Job', jobsSchema);
 
-module.exports = Job;
+module.exports.Job = Job;
 
-module.exports = jobsSchema;
+module.exports.jobsSchema = jobsSchema;

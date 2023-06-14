@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 const Comment = require('./Comment');
-const Job = require('./Job');
+const { jobsSchema } = require('./Job');
 
 const usersSchema = new Schema({
     username: {
@@ -22,7 +22,7 @@ const usersSchema = new Schema({
         minlength: 5
     },
     comments: [Comment],
-    jobs: [Job],
+    jobs: [jobsSchema],
 });
 
 const User = model('User', usersSchema);
