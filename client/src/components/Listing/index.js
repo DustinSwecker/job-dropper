@@ -14,7 +14,7 @@ const Listing = () => {
         </div>: 
         <div>             
         { jobs[0]?.link }
-        { jobs[1].title }
+        { jobs[1]?.title }
         </div>}
         </div>
 )}            
