@@ -12,6 +12,7 @@ const resolvers = {
         },
         job: async (parent, { jobId }) => {
             return await Job.findOne({ _id: jobId });
+        },
 
         singleUser: async(parent, args) => {
             return await User.findOne({ _id: args.userId })
