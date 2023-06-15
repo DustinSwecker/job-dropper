@@ -21,6 +21,10 @@ import GraphQL from './components/Skills/graphQL'
 import Java from './components/Skills/java'
 import Cplus from './components/Skills/cplusplus'
 import Express from './components/Skills/express'
+import Wordpress from './components/Skills/wordpress'
+import Angular from './components/Skills/angular'
+import Github from './components/Skills/github';
+import AWS from './components/Skills/AWS'
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -72,6 +76,10 @@ function App() {
       <GraphQL />
       <Java />
       <Cplus />
+      <Wordpress />
+      <AWS />
+      <Angular />
+      <Github />
      </div>
 
     </div>

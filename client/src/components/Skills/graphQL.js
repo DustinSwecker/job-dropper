@@ -8,7 +8,7 @@ const GraphQL = () => {
           icon={
             <MDBIcon 
         fab
-        icon="database"/>
+        icon="battle-net"/>
         }
         label="GraphQL"/>
     )

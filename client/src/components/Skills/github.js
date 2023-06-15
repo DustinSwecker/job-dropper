@@ -2,16 +2,16 @@ import "./skills.css"
 import Chip from '@mui/material/Chip';
 import {MDBIcon} from 'mdb-react-ui-kit';
 
-const Bootstrap = () => {
+const Github = () => {
     return (
-        <Chip className="chips"        
+        <Chip className="chips"     
           icon={
             <MDBIcon 
         fab
-        icon="bootstrap"/>
+        icon="github"/>
         }
-        label="Bootstrap"/>
+        label="GitHub"/>
     )
 }
 
-export default Bootstrap;
+export default Github;

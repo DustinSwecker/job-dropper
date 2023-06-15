@@ -4,7 +4,7 @@ import {MDBIcon} from 'mdb-react-ui-kit';
 
 const SQL = () => {
     return (
-        <Chip         
+        <Chip className="chips"        
           icon={
             <MDBIcon 
         fab

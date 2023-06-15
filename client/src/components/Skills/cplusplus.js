@@ -4,8 +4,8 @@ import {MDBIcon} from 'mdb-react-ui-kit';
 
 const Cplus = () => {
     return (
-        <Chip         
-          icon={
+        <Chip className="chips"        
+          icon={ 
             <MDBIcon 
         fab
         icon="cuttlefish"/>

@@ -4,8 +4,7 @@ import {MDBIcon} from 'mdb-react-ui-kit';
 
 const Express = () => {
     return (
-        <Chip        
-          
+        <Chip className="chips"          
         label="Express.js"/>
     )
 }
