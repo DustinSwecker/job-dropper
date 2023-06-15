@@ -13,8 +13,8 @@ const Listing = () => {
             Loading users....
         </div>: 
         <div>             
-        { jobs[0].link }
-        { jobs[1].title }
+        { jobs[0]?.link }
+        { jobs[1]?.title }
         </div>}
         </div>
 )}            
