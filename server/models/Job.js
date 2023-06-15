@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
 const Comment = require('./Comment');
+const dateFormat = require('../utils/dateFormat');
 
 const jobsSchema = new Schema({
     title: {
@@ -8,6 +9,11 @@ const jobsSchema = new Schema({
 
     },
     description: {
+        type: String,
+        required: true,
+        trim: true,
+    },
+    link: {
         type: String,
         required: true,
         trim: true,
@@ -35,6 +41,6 @@ const jobsSchema = new Schema({
 
 const Job = model('Job', jobsSchema);
 
-module.exports.Job = Job;
+module.exports = Job;
 
 module.exports.jobsSchema = jobsSchema;

@@ -6,8 +6,16 @@ const resolvers = {
         users: async () => {
             return await User.find();
         },
+
+        jobs: async () => {
+            return await Job.find();
+        },
+        job: async (parent, { jobId }) => {
+            return await Job.findOne({ _id: jobId });
+
         singleUser: async(parent, args) => {
             return await User.findOne({ _id: args.userId })
+
         },
     },
     Mutation: {
@@ -15,6 +23,26 @@ const resolvers = {
             const userData = await User.create(args);
             return userData;
         },
+
+        addJob: async(_, args) => {
+            const jobData = await Job.create(args);
+
+            return jobData;
+        },
+        updateJob: async(_, { jobId, title, description, link, skills, comments }) => {
+             const jobData = await Job.findOneAndUpdate(
+                { _id: jobId }, 
+                {$set:{ title:title, description: description, link:link, skills: skills, comments:comments }},
+                {new: true});
+
+            return jobData;
+         },
+        removeJob: async(_, { jobId }) => {
+            const jobData = await Job.findOneAndDelete({ _id: jobId });
+
+            return jobData;
+        },
+
         updateUser: async(_, args) => {
             const updateUserData = await User.findOneAndUpdate({
                 _id: args.userId
@@ -39,6 +67,7 @@ const resolvers = {
          
             return null
         }
+
     }
 };
 

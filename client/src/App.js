@@ -1,6 +1,8 @@
+import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client'
 import './App.css';
 import JobBoard from './components/Jobboard';
+import Listing from './components/Listing';
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -15,6 +17,11 @@ function App() {
      <div>
      <JobBoard/>
      </div>
+
+     <div>
+      <Listing/>
+     </div>
+
     </div>
     </ApolloProvider>
   );
