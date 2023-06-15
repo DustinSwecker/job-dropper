@@ -1,47 +1,5 @@
 import { gql } from '@apollo/client';
 
-
-export const ADD_JOB = gql`
-    mutation addJob($description: String!, $link: String!) {
-        addJob(description: $description, link: $link) {
-            _id
-            title
-            description
-            link
-            createdAt
-            skills
-            comments
-        }
-    }
-`;
-
-export const UPDATE_JOB = gql`
-    mutation Mutation($jobId: ID!, $description: String, $link: String) {
-        updateJob(jobId: $jobId, description: $description, link: $link) {
-             _id
-            title
-            description
-            link
-            createdAt
-            skills
-            comments
-        }
-    }     
-`;
-
-export const REMOVE_JOB = gql`
-    mutation removeJob($jobId: ID!) {
-        removeJob(jobId: $jobId) {
-            _id
-            title
-            description
-            link
-            createdAt
-            skills
-            comments
-        }
-    } 
-`;
 export const UPDATE_USER = gql` mutation Mutation($userId: ID!, $email: String!, $password: String!) {
   updateUser(userId: $userId, email: $email, password: $password) {
     comments
@@ -65,4 +23,110 @@ mutation Mutation($userId: ID!) {
       _id
     }
   }`
+
+
+export const ADD_JOB = gql`
+    mutation addJob($title: String, $description: String!, $company: String, $location: String, $link: String!, $Skills: String) {
+        addJob(title: $title, description: $description, company: $company, location: $location, link: $link, skills: $skills) {
+          _id
+          title
+          description
+          company
+          location
+          link
+          skills
+          createdAt
+          comments {
+            _id
+            commentBody
+            username
+            createdAt
+          }
+        }
+    }
+`;
+
+export const UPDATE_JOB = gql`
+    mutation updateJob($jobId: ID!, $title: String, $description: String, $company: String, $location: String,  $link: String, skills: String) {
+        updateJob(jobId: $jobId, title: $title, description: $description, company: $company, location: $location, link: $link, skills: $skills) {
+          _id
+          title
+          description
+          company
+          location
+          link
+          skills
+          createdAt
+          comments {
+            _id
+            commentBody
+            username
+            createdAt
+          }
+        }
+    }
+`;
+
+export const REMOVE_JOB = gql`
+    mutation removeJob($jobId: ID!) {
+        removeJob(jobId: $jobId) {
+          _id
+          title
+          description
+          company
+          location
+          link
+          skills
+          createdAt
+          comments {
+            _id
+            commentBody
+            username
+            createdAt
+          }
+        }
+    }
+`;
+
+export const ADD_COMMENT = gql`
+    mutation addComment($jobId: ID!, $commentBody: String!, $username: String) {
+        addComment(jobId: $jobId, commentBody: $commentBody, username: $username) {
+          _id
+          title
+          description
+          company
+          location
+          link
+          skills
+          createdAt
+          comments {
+            _id
+            commentBody
+            username
+            createdAt
+          }
+        }
+    }
+`;
+
+export const REMOVE_COMMENT = gql`
+    mutation removeComment($jobId: ID!, $commentId: ID!) {
+        removeComment(jobId: $jobId, commentId: $commentID) {
+          _id
+          title
+          description
+          company
+          location
+          link
+          skills
+          createdAt
+          comments {
+            _id
+            commentBody
+            username
+            createdAt
+          }
+        }
+    }
+`;
 

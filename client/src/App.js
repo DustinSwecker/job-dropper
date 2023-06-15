@@ -8,7 +8,8 @@ import './App.css';
 import JobBoard from './components/Jobboard';
 import Listing from './components/Listing';
 import Header from './components/Header';
-import Home from './components/Home'
+import Home from './components/Home';
+import Footer from './components/Footer';
 import ReactJS from './components/Skills/reactjs'
 import JavaScript from './components/Skills/javascript'
 import Bootstrap from './components/Skills/bootstrap'
@@ -46,21 +47,26 @@ function App() {
         
         <Navbar className = "nav">
           <Routes>
+
           <Route
             path = "/"
             element = {<Home />}
             />
-          
+          {/* <Route
+            path = "/"
+            element = {<Footer />}
+            /> */}
+
           </Routes>
         </Navbar>
-       
+       <Footer />
       </Router>
       
     <div className="App">
-     yo whatsup job droppers
-     <div>
+     {/* yo whatsup job droppers */}
+     {/* <div>
          <JobBoard/>
-     </div>
+     </div> */}
 
      <div>
       <Listing/>

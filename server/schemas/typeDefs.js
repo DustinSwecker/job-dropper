@@ -15,10 +15,19 @@ const typeDefs = gql`
         _id: ID!
         title: String
         description: String!
+        company: String
+        location: String
         link: String!
         skills: [String]
         createdAt: String
-        comments: [String]
+        comments: [Comment]
+    }
+
+    type Comment {
+        _id: ID!
+        commentBody: String!
+        username: String
+        createdAt: String
     }
 
     type Query {
@@ -30,12 +39,15 @@ const typeDefs = gql`
 
     type Mutation {
         addUser(username: String!, email: String!, password: String!): User 
-        addJob(description: String!, link: String!): Job
-        updateJob(jobId: ID!, title: String, description: String, link: String, skills: String, comments: String): Job
         updateUser(userId: ID!, email: String!, password: String!): User
         deleteUser(userId: ID!): User
-        removeJob(jobId: ID!): Job
 
+        addJob(title: String, description: String!, company: String, location: String, link: String!, skills: String!): Job
+        updateJob(jobId: ID!, title: String, description: String, company: String, location: String, link: String, skills: String): Job
+        removeJob(jobId: ID!): Job
+        
+        addComment(jobId: ID!, commentBody: String!, username: String): Job
+        removeComment(jobId: ID!, commentId: ID!): Job
     }`
 
 

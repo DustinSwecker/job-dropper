@@ -7,15 +7,15 @@ import Home from '../Home';
 const Header = () => {
     return(
     
-    
-        // <div className='d-flex flex-row  h-100 justify-content-between'>
-        // {/* Use Link component to create a link that returns to the homepage on click */}
-        // {/* <Link  to='/'>  */}
-        // <h4 className="m-0"> JOB DROPPER </h4>
-        //  {/* </Link>          */}
-        // </div>
+    // <>
+    //     <div className='d-flex flex-row  h-100 justify-content-between'>
+    // //     {/* Use Link component to create a link that returns to the homepage on click */}
+    // //     <Link  to='/'>  
+    //  <h4 className="m-0"> JOB DROPPER </h4>
+    //      </Link>          
+    // //     </div>
         
-        
+    //    </> 
           
           <Route
             path = "/"
