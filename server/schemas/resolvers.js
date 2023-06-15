@@ -18,14 +18,26 @@ const resolvers = {
         updateUser: async(_, args) => {
             const updateUserData = await User.findOneAndUpdate({
                 _id: args.userId
-            },{
+            },
+            {
+                $set: args
+            },
+            {
                 runValidators: true,
                 new: true
             });
+            console.log(updateUserData)
             if (!updateUserData) {
                 res.status(404).json({ message: 'no user with that ID'})
             }
             return updateUserData;
+        },
+        deleteUser: async (_,args) => {
+            await User.findOneAndDelete({
+                _id: args.userId
+            });
+         
+            return null
         }
     }
 };
