@@ -23,6 +23,7 @@ const typeDefs = gql`
 
     type Query {
         users: [User]
+        singleUser(userId: ID!): User
         jobs: [Job]
         job(jobId: ID!): Job
     }
@@ -31,17 +32,11 @@ const typeDefs = gql`
         addUser(username: String!, email: String!, password: String!): User 
         addJob(description: String!, link: String!): Job
         updateJob(jobId: ID!, title: String, description: String, link: String, skills: String, comments: String): Job
-        removeJob(jobId: ID!): Job
-
-        singleUser(userId: ID!): User
-    }
-
-    type Mutation {
-        addUser(username: String!, email: String!, password: String!): User
         updateUser(userId: ID!, email: String!, password: String!): User
         deleteUser(userId: ID!): User
-    }
-`
+        removeJob(jobId: ID!): Job
+
+    }`
 
 
 module.exports = typeDefs;

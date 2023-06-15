@@ -39,8 +39,6 @@ export const GET_SINGLE_JOB = gql`
   }
 `;
 
-
-`
 export const GET_SINGLE_USER = gql`
 query SingleUser($userId: ID!) {
   singleUser(userId: $userId) {
