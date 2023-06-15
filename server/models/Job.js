@@ -6,11 +6,18 @@ const jobsSchema = new Schema({
     title: {
         type: String,
         trim: true
-
     },
     description: {
         type: String,
         required: true,
+        trim: true,
+    },
+    company: {
+        type: String,
+        trim: true,
+    },
+    location: {
+        type: String,
         trim: true,
     },
     link: {
@@ -21,7 +28,7 @@ const jobsSchema = new Schema({
     skills: [
         {
         type: String,
-    }
+        }
     ],
     createdAt: {
         type: Date,
@@ -29,12 +36,12 @@ const jobsSchema = new Schema({
         get: (timestamp) => dateFormat(timestamp),
 
     },
-    comments: [Comment],
+    comments: [Comment]
 },
+
 {
     toJSON: {
         getters: true
-
     },
 }
 );
