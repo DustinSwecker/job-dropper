@@ -4,12 +4,6 @@ import React, { useState } from 'react';
 import {Route} from 'react-router-dom'
 import Home from '../Home';
 
-import { Link } from 'react-router-dom';
-
-
-import Container from 'react-bootstrap/container'
-import { Navbar, Nav } from 'react-bootstrap';
-
 const Header = () => {
     return(
     
