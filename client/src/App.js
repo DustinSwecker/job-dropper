@@ -77,13 +77,10 @@ function App() {
           </Routes>
         </Navbar>
        <Footer />
-      </Router>
+       </Router>
       
     <div className="App">
-     {/* yo whatsup job droppers */}
-     {/* <div>
-         <JobBoard/>
-     </div> */}
+     
 
      <div>
       <Listing/>
@@ -102,6 +99,7 @@ function App() {
      </div>
 
     </div>
+   
     </ApolloProvider>
   );
 }
