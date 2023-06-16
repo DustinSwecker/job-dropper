@@ -4,11 +4,11 @@ import {MDBIcon} from 'mdb-react-ui-kit';
 
 const GraphQL = () => {
     return (
-        <Chip id = "fontsaredumb" className="chips"     
+        <Chip component="a" href="https://www.apollographql.com/tutorials/browse" target="_blank" className="chips"     
           icon={
             <MDBIcon 
         fab
-        icon="database"/>
+        icon="battle-net"/>
         }
         label="GraphQL"/>
     )
