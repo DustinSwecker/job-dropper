@@ -29,12 +29,7 @@ function Home(){
                 <Link to = "/">
                     <button type='button' className='btn btn-info'>Post a Job Here!!</button>
                 </Link>
-                {/* <Navbar.Toggle aria-controls='navbar' />
-                <Navbar.Collapse id='navbar' className='d-flex flex-row-reverse'>
-                <Nav className='ml-auto d-flex'>
-                <Link >Login/Sign Up</Link>
-                </Nav> 
-                </Navbar.Collapse> */}
+                
 
 
           <div className='d-flex justify-right' >
