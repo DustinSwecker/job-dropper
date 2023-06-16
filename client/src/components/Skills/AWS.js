@@ -4,7 +4,7 @@ import {MDBIcon} from 'mdb-react-ui-kit';
 
 const AWS = () => {
     return (
-        <Chip className="chips"        
+        <Chip className="chips" component="a" href="https://www.aws.training/" target="_blank" clickable      
           icon={
             <MDBIcon 
         fab

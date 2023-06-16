@@ -4,7 +4,7 @@ import {MDBIcon} from 'mdb-react-ui-kit';
 
 const Rust = () => {
     return (
-            <Chip className="chips"
+            <Chip className="chips" component="a" href="https://www.rust-lang.org/learn" target="_blank"
                 icon={
                     <MDBIcon
                 fab

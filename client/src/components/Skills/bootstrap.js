@@ -4,7 +4,7 @@ import {MDBIcon} from 'mdb-react-ui-kit';
 
 const Bootstrap = () => {
     return (
-        <Chip className="chips"        
+        <Chip className="chips" component="a" href="https://www.w3schools.com/bootstrap5/" target="_blank" clickable       
           icon={
             <MDBIcon 
         fab

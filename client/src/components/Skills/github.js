@@ -4,7 +4,7 @@ import {MDBIcon} from 'mdb-react-ui-kit';
 
 const Github = () => {
     return (
-        <Chip className="chips"     
+        <Chip className="chips" component="a" href="https://git-scm.com/" target="_blank"    
           icon={
             <MDBIcon 
         fab

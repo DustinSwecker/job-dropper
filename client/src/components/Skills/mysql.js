@@ -4,7 +4,7 @@ import {MDBIcon} from 'mdb-react-ui-kit';
 
 const MySql = () => {
     return (
-        <Chip id = "fontsaredumb" className="chips"     
+        <Chip component="a" href="https://www.mysqltutorial.org/" target="_blank" className="chips"     
           icon={
             <MDBIcon 
         fab

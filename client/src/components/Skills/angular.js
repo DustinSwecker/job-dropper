@@ -4,13 +4,12 @@ import {MDBIcon} from 'mdb-react-ui-kit';
 
 const Angular = () => {
     return (
-        <Chip className="chips"        
+        <Chip label="Angular" component="a" href="https://angular.io/tutorial" target="_blank" clickable className="chips"        
           icon={
             <MDBIcon 
         fab
         icon="angular"/>
-        }
-        label="Angular"/>
+        }/>
     )
 }
 
