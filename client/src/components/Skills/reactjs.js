@@ -4,7 +4,7 @@ import {MDBIcon} from 'mdb-react-ui-kit';
 
 const ReactJS = () => {
     return (
-            <Chip className="chips"
+            <Chip className="chips" component="a" href="https://www.codecademy.com/learn/react-101" target="_blank"
                 icon={
                     <MDBIcon
                 fab

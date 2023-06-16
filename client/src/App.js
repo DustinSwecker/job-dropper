@@ -23,6 +23,15 @@ import GraphQL from './components/Skills/graphQL'
 import Java from './components/Skills/java'
 import Cplus from './components/Skills/cplusplus'
 import Express from './components/Skills/express'
+import Wordpress from './components/Skills/wordpress'
+import Angular from './components/Skills/angular'
+import Github from './components/Skills/github';
+import AWS from './components/Skills/AWS'
+import PHP from './components/Skills/php'
+import Python from './components/Skills/python'
+import Rust from './components/Skills/rust'
+import Vue from './components/Skills/vue'
+import MySql from './components/Skills/mysql';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -65,6 +74,12 @@ function App() {
             path = "/"
             element = {<Home />}
             />
+
+          <Route
+            path = "/"
+            element = {<Footer />}
+            />
+
           <Route 
                 path="/login" 
                 element={<Login />} 
@@ -73,6 +88,7 @@ function App() {
                 path="/signup" 
                 element={<Signup />} 
           />
+
 
           </Routes>
         </Navbar>
@@ -99,6 +115,15 @@ function App() {
       <GraphQL />
       <Java />
       <Cplus />
+      <Wordpress />
+      <AWS />
+      <Angular />
+      <Github />
+      <PHP />
+      <Python />
+      <Rust />
+      <MySql />
+      <Vue />
      </div>
 
     </div>
