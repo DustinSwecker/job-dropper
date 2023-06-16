@@ -1,5 +1,29 @@
 import { gql } from '@apollo/client';
 
+export const LOGIN_USER = gql`
+  mutation login($email: String!, $password: String!) {
+    login(email: $email, password: $password) {
+      token
+      user {
+        _id
+        username
+      }
+    }
+  }
+`;
+
+export const SIGNUP_USER = gql`
+  mutation signupUser($username: String!, $email: String!, $password: String!) {
+    signupUser(username: $username, email: $email, password: $password) {
+      token
+      user {
+        _id
+        username
+      }
+    }
+  }
+`;
+
 export const UPDATE_USER = gql` mutation Mutation($userId: ID!, $email: String!, $password: String!) {
   updateUser(userId: $userId, email: $email, password: $password) {
     comments
@@ -47,7 +71,7 @@ export const ADD_JOB = gql`
 `;
 
 export const UPDATE_JOB = gql`
-    mutation updateJob($jobId: ID!, $title: String, $description: String, $company: String, $location: String,  $link: String, skills: String) {
+    mutation updateJob($jobId: ID!, $title: String, $description: String, $company: String, $location: String,  $link: String, $skills: String) {
         updateJob(jobId: $jobId, title: $title, description: $description, company: $company, location: $location, link: $link, skills: $skills) {
           _id
           title
