@@ -9,6 +9,11 @@ const typeDefs = gql`
         comments: [String]
         jobs: [String]
     }
+
+    type Auth {
+        token: ID!
+        user: User
+      }
    
 
     type Job {
@@ -38,7 +43,10 @@ const typeDefs = gql`
     }
 
     type Mutation {
-        addUser(username: String!, email: String!, password: String!): User 
+        addUser(username: String!, email: String!, password: String!):User
+        login(email: String!, password: String!):Auth
+        signupUser(username: String!, email: String!, password: String!):Auth
+
         updateUser(userId: ID!, email: String!, password: String!): User
         deleteUser(userId: ID!): User
 
