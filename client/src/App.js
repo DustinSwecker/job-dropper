@@ -73,16 +73,16 @@ function App() {
           </Routes>
         </Navbar>
        <Footer />
-      </Router>
+       </Router>
       
     <div className="App">
-  
+
      <div>
      <Listing/>
      </div>
      <Pageination/>
     </div>
-    
+
     </ApolloProvider>
   );
 }
