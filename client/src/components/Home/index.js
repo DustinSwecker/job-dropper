@@ -9,7 +9,7 @@ import './home.css'
 // import Login from '../Login';
 // import Auth from '../../utils/auth'
 
-import Auth from '../../utils/auth'
+import Auth from '../../utils/auth';
 
 function Home(){
   const [active, setActive] = useState(false);
@@ -49,7 +49,7 @@ function Home(){
           <div className='mx-3 d-flex justify-right' >
           
 
-                <div>
+          <div>
           {Auth.loggedIn() ? (
             <button className="btn btn-lg btn-light m-2" onClick={logout}>
               Logout
