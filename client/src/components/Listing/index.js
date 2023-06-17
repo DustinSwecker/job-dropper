@@ -38,7 +38,7 @@ const Listing = () => {
            
             
             {jobs.map((job, i) => (      
-            <Card key={i} className="col-8 mx-auto mb-4">
+            <Card key={i} className="col-9 mx-auto mb-4">
 
 
               <Card.Body>
@@ -52,12 +52,12 @@ const Listing = () => {
                   ))}
                   </Stack>
                   </Col>
-                  <Col xs = {8}>
+                  <Col xs = {6}>
                 <Card.Title>{job.title}</Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">Tech Builders, Inc.</Card.Subtitle>
                 <Card.Subtitle className="mb-2 text-muted">Atlanta, GA</Card.Subtitle>
                 <Card.Text>"{job.description}"</Card.Text>
-                <Button variant="primary" id="applyBtn" href={`//${job.link}`} target="_blank">Apply Here!</Button>{' '}
+
                 <Button
         onClick={() => setOpen(!open)}
         aria-controls="example-collapse-text"
@@ -87,6 +87,9 @@ const Listing = () => {
         </div>
 
                 </Col>
+                <Col xs = {3}>
+                <Button variant="primary" id="applyBtn" href={`//${job.link}`} target="_blank">Apply Here!</Button>{' '}
+                </Col>
                 </Row>
 
                 <div>
@@ -97,7 +100,7 @@ const Listing = () => {
               </Card.Body>
               <Card.Footer>
               {job.comments.map((comment, j) => (
-                <Card key={j}>
+               <Card key={j} className="col-10 mx-auto">
                     <Card.Text className="m-0 pt-1 fst-italic">"{comment.commentBody}" - {comment.username}</Card.Text>
                     <Card.Text className="commentCreateTxt text-muted pb-1">{comment.createdAt}</Card.Text>
                 </Card>
