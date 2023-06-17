@@ -2,16 +2,16 @@ import "./skills.css"
 import Chip from '@mui/material/Chip';
 import {MDBIcon} from 'mdb-react-ui-kit';
 
-const SQL = () => {
+const MySql = () => {
     return (
-        <Chip className="chips" component="a" href="https://www.w3schools.com/sql/" target="_blank"     
+        <Chip component="a" href="https://www.mysqltutorial.org/" target="_blank" className="chips"     
           icon={
             <MDBIcon 
         fab
         icon="database"/>
         }
-        label="SQL"/>
+        label="MySQL"/>
     )
 }
 
-export default SQL;
+export default MySql;

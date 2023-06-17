@@ -1,4 +1,20 @@
 #applyBtn {
     background-color:#54B4D3;
+
+}
+.showCommentBtn {
+    font-size: 12px;
 }
 
+.createdAtTxt {
+    font-size: 14px;
+}
+
+.commentCreateTxt {
+    font-size: 14px;
+}
+
+/* #C4DFDF
+#D2E9E9
+#E3F4F4
+#F8F6F4 */

@@ -4,7 +4,7 @@ import {MDBIcon} from 'mdb-react-ui-kit';
 
 const MongoDB = () => {
     return (
-        <Chip className="chips"     
+        <Chip className="chips" component="a" href="https://learn.mongodb.com/" target="_blank"    
           icon={
             <MDBIcon 
         fab
