@@ -19,6 +19,7 @@ const Listing = () => {
             Loading job listings....
           </div>: 
           <div> 
+            <div>
             {jobs.map((job, i) => (      
             <Card key={i} className="col-8 mx-auto mb-4">
               <Card.Header>
@@ -32,10 +33,23 @@ const Listing = () => {
                 <Card.Text>"{job.description}"</Card.Text>
                 <Button variant="primary" id="applyBtn" href={`//${job.link}`} target="_blank">Apply Here!</Button>{' '}
                 <Button variant="primary" id="applyBtn" href={`//${job.link}`} target="_blank">Comment</Button>{' '}
+                <div>
+                  <Card.Link className="showCommentBtn" href="#">Show Comments</Card.Link>{' '}
+                  <Card.Text className="createdAtTxt text-muted"> Job posted on {job.createdAt}</Card.Text>
+                </div>
               </Card.Body>
-              <Card.Footer className="text-muted"> This job was posted on {job.createdAt}</Card.Footer>
+              <Card.Footer>
+              {job.comments.map((comment, j) => (
+                <Card key={j}>
+                    <Card.Text className="m-0 pt-1 fst-italic">"{comment.commentBody}" - {comment.username}</Card.Text>
+                    <Card.Text className="commentCreateTxt text-muted pb-1">{comment.createdAt}</Card.Text>
+                </Card>
+              ))}
+              </Card.Footer>
             </Card>
               ))}
+           </div>
+    
           </div>
         }   
       </div>
