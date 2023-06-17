@@ -76,11 +76,7 @@ function App() {
       </Router>
       
     <div className="App">
-     {/* yo whatsup job droppers */}
-     {/* <div>
-         <JobBoard/>
-     </div> */}
-
+  
      <div>
      <Listing/>
      </div>
