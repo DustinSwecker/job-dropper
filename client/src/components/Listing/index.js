@@ -30,15 +30,11 @@ const Listing = () => {
           
           
           
-          <div> 
+          <div>
 
             <h2 className="my-5">Recent Job Postings:</h2>
-            {jobs.map((job, i) => (  
-                 
-            <Card key={i} className="col-8 my-5 mx-auto mb-4">
-          
-
-            <div>
+           
+            
             {jobs.map((job, i) => (      
             <Card key={i} className="col-8 mx-auto mb-4">
 
@@ -80,15 +76,13 @@ const Listing = () => {
               ))}
               </Card.Footer>
             </Card>
-              ))}
-           </div>
-    
+              ))}        
+
           </div>
-          
-        }   
-      </div>
-      
-)}            
+}
+</div>)}
+
+                       
     
 
 export default Listing;
