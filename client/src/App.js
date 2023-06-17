@@ -54,6 +54,12 @@ function App() {
             path = "/"
             element = {<Home />}
             />
+
+          <Route
+            path = "/"
+            element = {<Footer />}
+            />
+
           <Route 
                 path="/login" 
                 element={<Login />} 
@@ -62,6 +68,7 @@ function App() {
                 path="/signup" 
                 element={<Signup />} 
           />
+
 
           </Routes>
         </Navbar>
