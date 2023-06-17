@@ -1,0 +1,10 @@
+#logo {
+    width: 50%;
+    min-width: 100px;
+    height: auto;
+    background-color: #F8F6F4;
+}
+#drop {
+    width: 80%;
+    height: 60px;
+}
