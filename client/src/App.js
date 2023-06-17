@@ -11,27 +11,7 @@ import Listing from './components/Listing';
 import Header from './components/Header';
 import Home from './components/Home';
 import Footer from './components/Footer';
-import ReactJS from './components/Skills/reactjs'
-import JavaScript from './components/Skills/javascript'
-import Bootstrap from './components/Skills/bootstrap'
-import MongoDB from './components/Skills/MongoDB'
-import NodeJS from './components/Skills/node'
-import Html from './components/Skills/html'
-import CSS from './components/Skills/css'
-import SQL from './components/Skills/sql'
-import GraphQL from './components/Skills/graphQL'
-import Java from './components/Skills/java'
-import Cplus from './components/Skills/cplusplus'
-import Express from './components/Skills/express'
-import Wordpress from './components/Skills/wordpress'
-import Angular from './components/Skills/angular'
-import Github from './components/Skills/github';
-import AWS from './components/Skills/AWS'
-import PHP from './components/Skills/php'
-import Python from './components/Skills/python'
-import Rust from './components/Skills/rust'
-import Vue from './components/Skills/vue'
-import MySql from './components/Skills/mysql';
+import Pageination from './components/Pageination';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
@@ -67,7 +47,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         {/* <Header /> */}
-        <Navbar className = "nav">
+        <Navbar className = "justify-content-center nav">
           <Routes>
 
           <Route
@@ -96,35 +76,13 @@ function App() {
        </Router>
       
     <div className="App">
-     
 
      <div>
-      <Listing/>
-      <ReactJS />
-      <JavaScript />
-      <Express />
-      <Bootstrap />
-      <MongoDB />
-      <NodeJS />
-      <Html />
-      <CSS />
-      <SQL />
-      <GraphQL />
-      <Java />
-      <Cplus />
-      <Wordpress />
-      <AWS />
-      <Angular />
-      <Github />
-      <PHP />
-      <Python />
-      <Rust />
-      <MySql />
-      <Vue />
+     <Listing/>
      </div>
-
+     <Pageination/>
     </div>
-   
+
     </ApolloProvider>
   );
 }

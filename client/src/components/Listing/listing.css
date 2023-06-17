@@ -5,6 +5,10 @@
 .showCommentBtn {
     font-size: 12px;
 }
+#main{
+    background-color: #E3F4F4;
+    border-top: solid black;
+}
 
 .createdAtTxt {
     font-size: 14px;
