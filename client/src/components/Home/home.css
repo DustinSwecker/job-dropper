@@ -3,8 +3,29 @@
     min-width: 100px;
     height: auto;
     background-color: #F8F6F4;
+    margin-left: 10%;
 }
 #drop {
     width: 80%;
     height: 60px;
+    font-size: large;
+}
+
+@media screen and (max-width: 768px) {
+#navmessage {
+    font-size: small;
+}
+#logo{
+    width: 50px;
+}
+}
+
+@media screen and (max-width: 600px) {
+#navmessage {
+    display: none;
+}
+#logo {
+    margin-left: 100px;
+}
+
 }

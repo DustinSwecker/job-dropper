@@ -4,20 +4,22 @@ import {useQuery, useMutation} from '@apollo/client';
 import { GET_JOBS } from '../../utils/queries';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Form } from "react-bootstrap";
 import { Col, Row } from "react-bootstrap";
 import Stack from '@mui/material/Stack';
 import { getHref, getLabel, getIcon } from "../Skills/skills";
 import Chip from '@mui/material/Chip';
 import {MDBIcon} from 'mdb-react-ui-kit';
+import Collapse from 'react-bootstrap/Collapse';
 
 
 
 const Listing = () => {
     const {loading, data} = useQuery(GET_JOBS);
-    
+    const [open, setOpen] = useState(false);
     const jobs = data?.jobs || [];
     const jobsSkills = jobs.map((job, i)=> jobs[i].skills)
-    
+
   console.log(jobsSkills)
     
     
@@ -56,7 +58,33 @@ const Listing = () => {
                 <Card.Subtitle className="mb-2 text-muted">Atlanta, GA</Card.Subtitle>
                 <Card.Text>"{job.description}"</Card.Text>
                 <Button variant="primary" id="applyBtn" href={`//${job.link}`} target="_blank">Apply Here!</Button>{' '}
-                <Button variant="primary" id="applyBtn" href={`//${job.link}`} target="_blank">Comment</Button>{' '}
+                <Button
+        onClick={() => setOpen(!open)}
+        aria-controls="example-collapse-text"
+        aria-expanded={open}
+      >
+        Add a Comment!
+      </Button>
+      <div style={{ minHeight: '150px' }}>
+        <Collapse in={open} dimension="width">
+          <div id="collapse-form">
+          <Form>
+      <Form.Group className="mb-3" controlId="addComment">
+        <Form.Label>Add a Comment</Form.Label>
+        <Form.Control type="text" placeholder="comment..." />
+        <Form.Text className="text-muted">
+          
+        </Form.Text>
+      </Form.Group>
+
+      
+      <Button variant="primary" type="submit">
+        Submit
+      </Button>
+    </Form>
+          </div>
+        </Collapse>
+        </div>
 
                 </Col>
                 </Row>
