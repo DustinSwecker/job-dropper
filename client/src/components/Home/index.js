@@ -27,7 +27,7 @@ function Home(){
       };
 
 
-    return(
+    return (
       <div className="containter-fluid d-flex">
         <div className='d-flex flex-row h-100 justify-content-between'> 
       {/* Use Link component to create a link that returns to the homepage on click */}
@@ -70,7 +70,7 @@ function Home(){
          </div>
 
 
-
+      </div>
   
     );
 };
