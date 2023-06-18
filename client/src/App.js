@@ -5,7 +5,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Nav, Navbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import JobBoard from './components/Jobboard';
 import Listing from './components/Listing';
 import Header from './components/Header';
 import Home from './components/Home';
@@ -19,6 +18,7 @@ import Card from 'react-bootstrap/Card';
 import Stack from '@mui/material/Stack';
 import Login from './components/Login';
 import Signup from './components/Signup';
+import JobForm from './components/jobform/jform';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -43,20 +43,28 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <ApolloProvider client={client}>
+  <ApolloProvider client={client}>
       <Router>
-        {/* <Header /> */}
-        <Navbar className = "justify-content-center nav">
+      <div>
+      <Nav className = "justify-content-center nav" >
+      
+        <Header />
+        </Nav>
           <Routes>
 
           <Route
-            path = "/"
-            element = {<Home />}
+            path = "/listing"
+            element = {<Listing />}
             />
 
           <Route
+            path = "/pageform"
+            element = {<JobForm />}
+            />
+
+            <Route
             path = "/"
-            element = {<Footer />}
+            element = {<Home />}
             />
 
           <Route 
@@ -68,20 +76,11 @@ function App() {
                 element={<Signup />} 
           />
 
-
+          
           </Routes>
-        </Navbar>
-       <Footer />
-       </Router>
-      
-    <div className="App">
-
-     <div>
-     <Listing/>
-     </div>
-     <Pageination/>
-    </div>
-
+          </div>
+          </Router>
+          <Footer />
     </ApolloProvider>
   );
 }
