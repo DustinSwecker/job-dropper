@@ -43,7 +43,7 @@ function Header(){
                     <button id="drop" type='button' className='btn btn-info mx-5'> <i onMouseOver = {addBeat}  onMouseOut = {removeBeat} className={active ? "fa-beat fas fa-fill-drip" : "fas fa-fill-drip" }></i> Drop a job </button>
                 </Link>
                 <Link to = "/listing">
-        <button style={{width: "fit-content"}} type='button' className='btn btn-info'> <i class="fa-solid fa-newspaper"></i> See the Listings! </button>
+        <button style={{width: "fit-content"}} type='button' className='btn btn-info'> <i className="fa-solid fa-newspaper"></i> See the Listings! </button>
         </Link>
                 
 

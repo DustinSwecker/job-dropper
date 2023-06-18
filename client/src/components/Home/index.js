@@ -29,7 +29,7 @@ function Home () {
           We want to make job search social in a way it hasn't been done before. So what's stopping you? Go ahead and find a new job!
         </Card.Text>
         <Link to = "/listing">
-        <button style={{width: "fit-content"}} type='button' className='btn btn-info'> <i class="fa-solid fa-newspaper"></i> See the Listings! </button>
+        <button style={{width: "fit-content"}} type='button' className='btn btn-info'> <i className="fa-solid fa-newspaper"></i> See the Listings! </button>
         </Link>
         </Card.Body>
         </Col>
