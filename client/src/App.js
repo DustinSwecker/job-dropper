@@ -4,7 +4,6 @@ import { setContext } from '@apollo/client/link/context';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Nav, Navbar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import './App.css';
 import JobBoard from './components/Jobboard';
 import Listing from './components/Listing';
@@ -73,16 +72,16 @@ function App() {
           </Routes>
         </Navbar>
        <Footer />
-      </Router>
+       </Router>
       
     <div className="App">
-  
+
      <div>
      <Listing/>
      </div>
      <Pageination/>
     </div>
-    
+
     </ApolloProvider>
   );
 }

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { useMutation } from '@apollo/client';
 import { SIGNUP_USER } from '../../utils/mutations';
+// import { GET_SINGLE_USER} from '../../utils/queries';
 
 import Auth from '../../utils/auth';
 
@@ -48,7 +49,8 @@ const Signup = () => {
           <div className="card-body">
             {data ? (
               <p>
-                Success! You may now head{' '}
+                Welcome {signupUser.username}!!!
+                You may now head{' '}
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
