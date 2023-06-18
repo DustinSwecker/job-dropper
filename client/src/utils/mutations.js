@@ -50,8 +50,8 @@ mutation Mutation($userId: ID!) {
 
 
 export const ADD_JOB = gql`
-    mutation addJob($title: String, $description: String!, $company: String, $location: String, $link: String!, $Skills: String) {
-        addJob(title: $title, description: $description, company: $company, location: $location, link: $link, skills: $skills) {
+    mutation addJob($description: String!, $link: String!, $skills: String!) {
+        addJob(description: $description, link: $link, skills: $skills) {
           _id
           title
           description
@@ -69,6 +69,7 @@ export const ADD_JOB = gql`
         }
     }
 `;
+
 
 export const UPDATE_JOB = gql`
     mutation updateJob($jobId: ID!, $title: String, $description: String, $company: String, $location: String,  $link: String, $skills: String) {

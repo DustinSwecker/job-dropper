@@ -18,7 +18,7 @@ import Card from 'react-bootstrap/Card';
 import Stack from '@mui/material/Stack';
 import Login from './components/Login';
 import Signup from './components/Signup';
-import JobForm from './components/jobform/jform';
+import JobForm from './components/jobform/index_meg';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
