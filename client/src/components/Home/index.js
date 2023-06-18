@@ -9,7 +9,7 @@ function Home () {
     return (<div><Container fluid className="m-5">
     <Card>
       <Row className="m-5">
-        <Col xs={6} md={8}>
+        <Col xs={12} md={8}>
         <Card.Body>
         <Card.Title>Why Job Dropper?</Card.Title>
         <br></br>
@@ -34,7 +34,7 @@ function Home () {
         </Card.Body>
         </Col>
         <Col>
-        <Card.Img style={{width: 'fit-content', height: '400px', float: 'left'}} src="https://plus.unsplash.com/premium_photo-1679936310859-bb50897c4c89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGpvYiUyMHNlZWtlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60" />
+        <Card.Img style={{width: 'fit-content', height: '400px', }} src="https://plus.unsplash.com/premium_photo-1679936310859-bb50897c4c89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fGpvYiUyMHNlZWtlcnxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=600&q=60" />
       
       </Col>
       </Row>
@@ -45,7 +45,7 @@ function Home () {
     <Card>
       <Row className="m-5">
       <Col xs={12}>
-        <Card.Img className="m-5" style={{width: 'fit-content', textAlign: 'center', height: '400px', float: 'left'}} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.IK_vt23gFFEvlLLaGvPoyQHaEK%26pid%3DApi&f=1&ipt=eb012a5aa9812de609632193bfce1234586127a8e004748cf7da253da21fd396&ipo=images" />
+        <Card.Img className="m-5" style={{width: 'fit-content', textAlign: 'center', height: '300px'}} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.IK_vt23gFFEvlLLaGvPoyQHaEK%26pid%3DApi&f=1&ipt=eb012a5aa9812de609632193bfce1234586127a8e004748cf7da253da21fd396&ipo=images" />
       
       </Col>
         <Col xs={12} md={12}>
@@ -56,6 +56,10 @@ function Home () {
           Job posts at Job Dropper are quick and easy! Just fill out the a few quick, easy, peasy form fields and Job Dropper will notify your friends of the sweet new gig you've found!
           <br></br>
           <br></br>
+          Additionally, click on any required skill in the listings and it'll take you or your friend to the training you need! What's better than that?
+          <br></br>
+          <br></br>
+
 
           So quit reading and just Drop it!
           <br></br>
