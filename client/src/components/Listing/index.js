@@ -1,6 +1,7 @@
 import "./listing.css"
 import {useState} from 'react';
 import {useQuery, useMutation} from '@apollo/client';
+import { ADD_COMMENT } from '../../utils/mutations'
 import { GET_JOBS } from '../../utils/queries';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -14,13 +15,29 @@ import Collapse from 'react-bootstrap/Collapse';
 
 
 
-const Listing = () => {
+const Listing = ({username}) => {
     const {loading, data} = useQuery(GET_JOBS);
     const [open, setOpen] = useState(false);
+    const [comment, setComment] = useState('');
+    const [addComment, { error }] = useMutation(ADD_COMMENT);
+
+    const handleSubmit = async (e) => {
+      
+      e.preventDefault();
+      try {
+        const data = await addComment({
+          variables: { comment, username },
+        });
+  
+        setComment('');
+      } catch (err) {
+        console.error(err);
+      }
+      setComment(' ');
+    };
+ 
     const jobs = data?.jobs || [];
     const jobsSkills = jobs.map((job, i)=> jobs[i].skills)
-
-  console.log(jobsSkills)
     
     
     return (
@@ -68,7 +85,7 @@ const Listing = () => {
       <div style={{ minHeight: '150px' }}>
         <Collapse in={open} dimension="width">
           <div id="collapse-form">
-          <Form>
+          <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="addComment">
         <Form.Label>Add a Comment</Form.Label>
         <Form.Control type="text" placeholder="comment..." />
@@ -110,8 +127,9 @@ const Listing = () => {
               ))}        
 
           </div>
-}
-</div>)}
+      }
+    </div>
+)}
 
                        
     
