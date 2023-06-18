@@ -28,8 +28,8 @@ const resolvers = {
             return userData;
         },
 
-        signupUser: async (parent, { name, email, password }) => {
-            const user = await User.create({ name, email, password });
+        signupUser: async (parent, { username, email, password }) => {
+            const user = await User.create({ username, email, password });
             const token = signToken(user);
       
             return { token, user};

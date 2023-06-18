@@ -9,7 +9,7 @@ import Auth from '../../utils/auth';
 
 const Signup = () => {
   const [formState, setFormState] = useState({
-    name: '',
+    username: '',
     email: '',
     password: '',
   });
@@ -42,14 +42,14 @@ const Signup = () => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <main className="w-60 mt-auto text-dark">
       <div className="col-12 col-lg-10">
+      {/* <div className="container text-center mb-5"> */}
         <div className="card">
-          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4>
+          <h4 className="card-header bg-dark text-light p-2">Sign Up</h4> 
           <div className="card-body">
             {data ? (
               <p>
-                Welcome {signupUser.username}!!!
                 You may now head{' '}
                 <Link to="/">back to the homepage.</Link>
               </p>
@@ -58,7 +58,7 @@ const Signup = () => {
                 <input
                   className="form-input"
                   placeholder="Your username"
-                  name="name"
+                  name="username"
                   type="text"
                   value={formState.name}
                   onChange={handleChange}
@@ -97,6 +97,7 @@ const Signup = () => {
           </div>
         </div>
       </div>
+      {/* </div> */}
     </main>
   );
 };

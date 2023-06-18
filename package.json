@@ -26,6 +26,6 @@
   "homepage": "https://github.com/DustinSwecker/job-dropper#readme",
   "dependencies": {
     "concurrently": "^8.2.0"
-    
+   
   }
 }
