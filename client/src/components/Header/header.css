@@ -1,7 +1,12 @@
+#navheader {
+    height: 400px;
+}
+
 #logo {
     width: 50%;
     min-width: 100px;
     height: auto;
+    max-height: 'fit-content';
     background-color: #F8F6F4;
     margin-left: 10%;
 }
@@ -13,10 +18,13 @@
 
 @media screen and (max-width: 768px) {
 #navmessage {
-    font-size: small;
+    display: none;
 }
 #logo{
     width: 50px;
+}
+#drop{
+    font-size: medium;
 }
 }
 
@@ -26,6 +34,9 @@
 }
 #logo {
     margin-left: 100px;
+}
+#drop{
+    font-size: small;
 }
 
 }
