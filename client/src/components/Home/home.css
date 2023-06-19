@@ -1,0 +1,21 @@
+#homecontainer {
+    background-color: #D2E9E9;
+    border-top: solid black;
+}
+
+#droplink {
+    width: 80%;
+    height: 60px;
+    font-size: large;
+}
+#homelistlink {
+    width: 80%;
+    height: 60px;
+    font-size: large;
+}
+
+@media screen and (max-width: 768px) {
+#helpafriend{
+    width: 200px;
+}
+}

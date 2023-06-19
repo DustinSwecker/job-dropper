@@ -3,18 +3,19 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Row, Col, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import './home.css'
 
 
 function Home () {
-    return (<div><Container fluid className="m-5">
+    return (<div id="homecontainer"><Container fluid className="m-5">
     <Card>
       <Row className="m-5">
-        <Col xs={12} md={8}>
+        <Col xs={12} md={6}>
         <Card.Body>
         <Card.Title>Why Job Dropper?</Card.Title>
         <br></br>
         <Card.Text>
-          Because social networking sites are too formal! They take too long, require too much information! 
+          Because OTHER social networking sites are too formal! They take too long, require too much information! 
           <br></br>
           <br></br>
           
@@ -29,7 +30,9 @@ function Home () {
           We want to make job search social in a way it hasn't been done before. So what's stopping you? Go ahead and find a new job!
         </Card.Text>
         <Link to = "/listing">
+
         <button style={{width: "fit-content"}} type='button' className='btn btn-info'> <i className="fa-solid fa-newspaper"></i> See the Listings! </button>
+
         </Link>
         </Card.Body>
         </Col>
@@ -45,7 +48,7 @@ function Home () {
     <Card>
       <Row className="m-5">
       <Col xs={12}>
-        <Card.Img className="m-5" style={{width: 'fit-content', textAlign: 'center', height: '300px'}} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.IK_vt23gFFEvlLLaGvPoyQHaEK%26pid%3DApi&f=1&ipt=eb012a5aa9812de609632193bfce1234586127a8e004748cf7da253da21fd396&ipo=images" />
+        <Card.Img id="helpafriend"className="m-5" style={{maxWidth: "600px", width: '80%', textAlign: 'center', height: '300px'}} src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.IK_vt23gFFEvlLLaGvPoyQHaEK%26pid%3DApi&f=1&ipt=eb012a5aa9812de609632193bfce1234586127a8e004748cf7da253da21fd396&ipo=images" />
       
       </Col>
         <Col xs={12} md={12}>
@@ -67,8 +70,8 @@ function Home () {
 
           
         </Card.Text>
-        <Link to = "/pageform">
-        <button style={{width: "fit-content"}} id="drop" type='button' className='btn btn-info'> <i className="fa-beat fas fa-fill-drip" ></i> Drop a job </button>
+        <Link id="listlink" to = "/pageform">
+        <button style={{width: "fit-content"}} id="droplink" type='button' className='btn btn-info'> <i className="fa-beat fas fa-fill-drip" ></i> Drop a job </button>
         </Link>
         </Card.Body>
         </Col>

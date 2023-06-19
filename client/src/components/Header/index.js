@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import image from '../../images/job_dropper_logo.png'
 import { MDBIcon } from "mdb-react-ui-kit";
-import './home.css'
+import './header.css'
 // import  {Navbar,Nav} from "react-bootstrap";
 // import Login from '../Login';
 // import Auth from '../../utils/auth'
@@ -28,11 +28,11 @@ function Header(){
 
 
     return (
-      <div className="containter-fluid d-flex">
+      <div id="navheader" className="containter-fluid d-flex">
         <div className='d-flex flex-row h-100 justify-content-between'> 
       {/* Use Link component to create a link that returns to the homepage on click */}
         <Link  to='/'> 
-        <img id = "logo" src={image}></img>
+        <img className="mx-5 my-1" id = "logo" src={image}></img>
         </Link>          
      </div>
      
