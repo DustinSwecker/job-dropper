@@ -14,7 +14,7 @@ const resolvers = {
         },
 
         jobs: async () => {
-            return await Job.find();
+            return await Job.find().sort({ createdAt: -1 });
         },
 
         job: async (parent, { jobId }) => {
