@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useMutation } from '@apollo/client';
 import { Link } from "react-router-dom";
+import { Form } from "react-bootstrap";
 
 import { ADD_JOB } from '../../utils/mutations';
 
@@ -41,8 +42,8 @@ const JobForm = () => {
     <div>
       {data ? (
       <p>
-        Success! You may now head{' '}
-        <Link to="/listing">back to the homepage.</Link>
+        Success! Thank you for dropping a job!{' '}
+        <Link to="/listing">Return to the homepage.</Link>
       </p>
     ) : (
     <form onSubmit={handleSubmit}>
@@ -101,15 +102,28 @@ const JobForm = () => {
           required/>
       </div>
 
-      <div className="form-group">
-        <label htmlFor="skills">Skills</label>
-        <input
-          type="text"
-          name="skills"
-          id="skills"
-          value={jobInfo.skills}
-          onChange={handleInputChange}
-          />
+      <div key={`inline-checkbox`} className="mb-3">
+        <Form.Check inline label="Angular" name="skills" type="checkbox" value="Angular" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="AWS" name="skills" type="checkbox" value="AWS" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="Bootstrap" name="skills" type="checkbox" value="Bootstrap" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="C+" name="skills" type="checkbox" value="C+" id={`inline-checkbox-1`} onChange={handleInputChange}/>                           
+        <Form.Check inline label="CSS" name="skills" type="checkbox" value="JavaScript" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="espress.js" name="skills" type="checkbox" value="espress.js" id={`inline-checkbox-1`} onChange={handleInputChange}/>      
+        <Form.Check inline label="github" name="skills" type="checkbox" value="github" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="graphql" name="skills" type="checkbox" value="graphql" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="HTML" name="skills" type="checkbox" value="HTML" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="Java" name="skills" type="checkbox" value="Java" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="JavaScript" name="skills" type="checkbox" value="JavaScript" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="MongoDB" name="skills" type="checkbox" value="MongoDB" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="MYSQL" name="skills" type="checkbox" value="MYSQL" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="node.js" name="skills" type="checkbox" value="node.js" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="python" name="skills" type="checkbox" value="python" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="React" name="skills" type="checkbox" value="React" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="Rust" name="skills" type="checkbox" value="Rust" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="SQL" name="skills" type="checkbox" value="SQL" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="Vue" name="skills" type="checkbox" value="Vue" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+        <Form.Check inline label="Wordpress" name="skills" type="checkbox" value="Wordpress" id={`inline-checkbox-1`} onChange={handleInputChange}/>
+  
       </div>
 
       <button type="submit" className="btn btn-primary">Submit</button>

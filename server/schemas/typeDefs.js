@@ -50,8 +50,8 @@ const typeDefs = gql`
         updateUser(userId: ID!, email: String!, password: String!): User
         deleteUser(userId: ID!): User
 
-        addJob(title: String, description: String!, company: String, location: String, link: String!, skills: String!): Job
-        updateJob(jobId: ID!, title: String, description: String, company: String, location: String, link: String, skills: String): Job
+        addJob(title: String, description: String!, company: String, location: String, link: String!, skills: [String]!): Job
+        updateJob(jobId: ID!, title: String, description: String, company: String, location: String, link: String, skills: [String]): Job
         removeJob(jobId: ID!): Job
         
         addComment(jobId: ID!, commentBody: String!, username: String): Job
