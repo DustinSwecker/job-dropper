@@ -51,7 +51,7 @@ mutation Mutation($userId: ID!) {
 
 
 export const ADD_JOB = gql`
-    mutation addJob($description: String!, $link: String!, $skills: String!, $title: String, $company: String, $location: String) {
+    mutation addJob($description: String!, $link: String!, $skills: [String]!, $title: String, $company: String, $location: String) {
         addJob(description: $description, link: $link, skills: $skills, title: $title, company: $company, location: $location) {
           _id
           title
