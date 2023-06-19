@@ -71,8 +71,8 @@ const Listing = ({username}) => {
                   </Col>
                   <Col xs = {6}>
                 <Card.Title>{job.title}</Card.Title>
-                <Card.Subtitle className="mb-2 text-muted">Tech Builders, Inc.</Card.Subtitle>
-                <Card.Subtitle className="mb-2 text-muted">Atlanta, GA</Card.Subtitle>
+                <Card.Subtitle className="mb-2 text-muted">{job.company}</Card.Subtitle>
+                <Card.Subtitle className="mb-2 text-muted">{job.location}</Card.Subtitle>
                 <Card.Text>"{job.description}"</Card.Text>
 
                 <Button
