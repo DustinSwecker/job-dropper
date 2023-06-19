@@ -12,6 +12,7 @@ import { getHref, getLabel, getIcon } from "../Skills/skills";
 import Chip from '@mui/material/Chip';
 import {MDBIcon} from 'mdb-react-ui-kit';
 import Collapse from 'react-bootstrap/Collapse';
+import Pageination from "../Pageination";
 
 
 
@@ -19,12 +20,12 @@ const Listing = ({username}) => {
     const {loading, data} = useQuery(GET_JOBS);
     const [open, setOpen] = useState(false);
     const [comment, setComment] = useState('');
-    const [addComment, { error }] = useMutation(ADD_COMMENT);
-
+    const [addComment, { error }] = useMutation(ADD_COMMENT);    
     const handleSubmit = async (e) => {
       
       e.preventDefault();
       try {
+        
         const data = await addComment({
           variables: { comment, username },
         });
@@ -33,12 +34,16 @@ const Listing = ({username}) => {
       } catch (err) {
         console.error(err);
       }
-      setComment(' ');
     };
+
+   
  
     const jobs = data?.jobs || [];
     const jobsSkills = jobs.map((job, i)=> jobs[i].skills)
     
+    const handleCommentToggler = () => {
+        
+    }
     
     return (
       <div id = "main">
@@ -75,7 +80,7 @@ const Listing = ({username}) => {
                 <Card.Subtitle className="mb-2 text-muted">{job.location}</Card.Subtitle>
                 <Card.Text>"{job.description}"</Card.Text>
 
-                <Button
+                <Button 
         onClick={() => setOpen(!open)}
         aria-controls="example-collapse-text"
         aria-expanded={open}
@@ -128,6 +133,7 @@ const Listing = ({username}) => {
 
           </div>
       }
+      <Pageination />
     </div>
 )}
 
