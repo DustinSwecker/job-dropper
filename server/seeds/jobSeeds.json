@@ -4,70 +4,42 @@
     "description": "Junior position for JS",
     "company": "Amazon",
     "location": "Bend, Oregon",
-    "link": "www.amazon.com",
-    "skills": ["JavaScript", "MongoDB"],
-    "comments": [{
-        "username": "anonymous",
-        "commentBody": "Too cold!!"
-    },
-    {
-      "username": "John",
-      "commentBody": "Great company benefits!"
-    }]
+    "link": "www.indeed.com",
+    "skills": ["JavaScript", "Node.js"]
   },
   {
     "title": "Front End Developer",
     "description": "No experience needed - HTML",
-    "company": "Amazon",
-    "location": "Bend, Oregon",
     "link": "www.indeed.com",
-    "skills": ["HTML", "CSS", "JavaScript"],
-    "comments": [{
-      "username": "anonymous",
-      "commentBody": "Too cold!!"
-  },
-  {
-    "username": "John",
-    "commentBody": "Great company benefits!"
-  }]
+    "skills": ["HTML", "CSS", "JavaScript"]
   },
   {
     "title": "Front End Developer",
     "description": "Junior position CSS and Bootstrap",
-    "company": "Amazon",
-    "location": "Bend, Oregon",
     "link": "www.indeed.com",
     "skills": ["CSS", "Bootstrap"]
   },
   {
     "title": "Full Stack Developer",
     "description": "New tech startup looking for coders",
-    "company": "Amazon",
-    "location": "Bend, Oregon",
     "link": "www.indeed.com",
     "skills": "Node.js"
   },
   {
     "title": "Full Stack Developer",
     "description": "Work on a development team",
-    "company": "Amazon",
-    "location": "Bend, Oregon",
     "link": "www.indeed.com",
     "skills": "Express.js"
   },
   {
     "title": "Back End Developer",
     "description": "Database creation",
-    "company": "Amazon",
-    "location": "Bend, Oregon",
     "link": "www.indeed.com",
     "skills": "MySQL"
   },
   {
     "title": "Back End Developer",
     "description": "Established tech group but need junior",
-    "company": "Amazon",
-    "location": "Bend, Oregon",
     "link": "www.indeed.com",
     "skills": "MongoDB"
   },
@@ -80,24 +52,18 @@
   {
     "title": "Full Stack Developer",
     "description": "Temp position to refactor code",
-    "company": "Amazon",
-    "location": "Bend, Oregon",
     "link": "www.indeed.com",
     "skills": "GraphQL"
   },
   {
     "title": "Full Stack Developer",
     "description": "Need Junior in Atlanta area",
-    "company": "Amazon",
-    "location": "Bend, Oregon",
     "link": "www.indeed.com",
     "skills": "Sequelize"
   },
   {
     "title": "Front End Developer",
     "description": "Refactor code - no CS degree required",
-    "company": "Amazon",
-    "location": "Bend, Oregon",
     "link": "www.indeed.com",
     "skills": "Handlebars.js"
   }
