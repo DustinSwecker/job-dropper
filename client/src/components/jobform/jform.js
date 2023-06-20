@@ -76,7 +76,7 @@ const JobForm = () => {
         <Link to="/listing">Return to the homepage.</Link>
       </p>
     ) : (
-    <form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} className="col-6 mx-auto mb-4">
       <div className="form-group">
         <label htmlFor="title">Job Title</label>
         <input
@@ -87,7 +87,7 @@ const JobForm = () => {
           onChange={handleInputChange}
           />
       </div>
-
+      <br/>
       <div className="form-group">
         <label htmlFor="description">Description</label>
         <input
@@ -98,7 +98,7 @@ const JobForm = () => {
           onChange={handleInputChange}
           required/>
       </div>
-
+      <br/>
       <div className="form-group">
         <label htmlFor="company">Company</label>
         <input
@@ -109,7 +109,7 @@ const JobForm = () => {
           onChange={handleInputChange}
           />
       </div>
-
+      <br/>
       <div className="form-group">
         <label htmlFor="location">Location</label>
         <input
@@ -120,7 +120,7 @@ const JobForm = () => {
           onChange={handleInputChange}
           />
       </div>
-
+      <br/>
       <div className="form-group">
         <label htmlFor="link">Link</label>
         <input
@@ -131,7 +131,7 @@ const JobForm = () => {
           onChange={handleInputChange}
           required/>
       </div>
-
+      <br/>
       <div key={`inline-checkbox`} className="mb-3">
         <Form.Check inline label="Angular" name="skills" type="checkbox" value="Angular" id={`inline-checkbox-1`} onChange={handleInputChange2}/>
         <Form.Check inline label="AWS" name="skills" type="checkbox" value="AWS" id={`inline-checkbox-1`} onChange={handleInputChange2}/>
@@ -157,7 +157,8 @@ const JobForm = () => {
       </div>
 
       <button type="submit" className="btn btn-primary">Submit</button>
-    </form>
+      
+    </Form>
   )}
   </div>
 
