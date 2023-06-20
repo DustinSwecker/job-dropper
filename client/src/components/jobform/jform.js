@@ -73,7 +73,7 @@ const JobForm = () => {
       {data ? (
       <p>
         Success! Thank you for dropping a job!{' '}
-        <Link to="/listing">Return to the homepage.</Link>
+        <Link to="/listing">Return to the listings.</Link>
       </p>
     ) : (
     <form onSubmit={handleSubmit}>

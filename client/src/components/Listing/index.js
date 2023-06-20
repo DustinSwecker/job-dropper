@@ -21,6 +21,7 @@ const Listing = ({username}) => {
     const [open, setOpen] = useState(false);
     const [comment, setComment] = useState('');
     const [addComment, { error }] = useMutation(ADD_COMMENT);    
+
     const handleSubmit = async (e) => {
       
       e.preventDefault();
@@ -41,7 +42,17 @@ const Listing = ({username}) => {
     const jobs = data?.jobs || [];
     const jobsSkills = jobs.map((job, i)=> jobs[i].skills)
     
-    const handleCommentToggler = () => {
+    const handleCommentToggler = (e) => {
+      const jobId = e.target.id;
+      const selectedBtn = document.getElementById(jobId);
+      const collapseToggler = document.getElementbyId(`${jobId}collapse`)
+        if(selectedBtn['aria-expanded']==open) {
+          selectedBtn.setAttribute('aria-expanded', !open);
+          collapseToggler.setAttribute('in', !open);
+        } else {
+          selectedBtn.setAttribute('aria-expanded', open);
+          collapseToggler.setAttribute('in', open);
+        }
         
     }
     
@@ -80,15 +91,15 @@ const Listing = ({username}) => {
                 <Card.Subtitle className="mb-2 text-muted">{job.location}</Card.Subtitle>
                 <Card.Text>"{job.description}"</Card.Text>
 
-                <Button 
-        onClick={() => setOpen(!open)}
+                <Button id = {job._id}
+        onClick={handleCommentToggler}
         aria-controls="example-collapse-text"
         aria-expanded={open}
       >
         Add a Comment!
       </Button>
       <div style={{ minHeight: '150px' }}>
-        <Collapse in={open} dimension="width">
+        <Collapse id={`${job._id}collapse`} in={open} dimension="width">
           <div id="collapse-form">
           <Form onSubmit={handleSubmit}>
       <Form.Group className="mb-3" controlId="addComment">
